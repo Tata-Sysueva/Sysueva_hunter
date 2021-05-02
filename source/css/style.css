@@ -1,2 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px; }
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/latoregular.woff2") format("woff2"), url("../fonts/latoregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Medium"), local("Lato-Medium"), url("../fonts/latomedium.woff2") format("woff2"), url("../fonts/latomedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato Bold"), local("Lato-Bold"), url("../fonts/latobold.woff2") format("woff2"), url("../fonts/latobold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Semibold"), local("OpenSans-Semibold"), url("../fonts/opensanssemibold.woff2") format("woff2"), url("../fonts/opensanssemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+:root {
+  --base-weak: #ffffff;
+  --faint: rgba(20, 20, 20, 0.5);
+  --faint-weak: #e5e5e5;
+  --faint-strong: rgba(0, 0, 0, 0.8);
+  --basic: #595755;
+  --basic-strong: #27221c;
+  --accent: #a4341c;
+  --complain: #32521e; }
+
+.page {
+  height: 100%; }
+
+.page__body {
+  display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  font-family: "Lato", "Helvetica", sans-serif;
+  color: var(--basic); }
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding-left: 165px;
+  padding-right: 165px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.header__logo {
+  margin-right: 347px; }
+
+.header__logo-img {
+  width: 120px;
+  height: 49px; }
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.nav__item {
+  margin-right: 99px; }
+  .nav__item:nth-child(2) {
+    margin-right: 133px; }
+  .nav__item:last-child {
+    margin-right: 0; }
+
+.nav__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--basic);
+  text-transform: lowercase; }
+  .nav__link--button {
+    font-size: 22px;
+    line-height: 26px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px 32px 10px;
+    color: var(--base-weak);
+    background-color: var(--accent); }
+
+.slider-container {
+  display: none;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto); }
+  .slider-container--current {
+    display: grid; }
+
+.slider__img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  z-index: -1; }
+
+.slider__desc {
+  grid-column: 1/2;
+  grid-row: 2/-1;
+  max-width: 534px;
+  margin: 0 0 119px 170px;
+  padding: 25px 34px 33px;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  color: var(--accent);
+  background-color: var(--faint-strong);
+  z-index: 1; }
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 352px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  margin: 0 auto; }
+
+.slider__btn {
+  width: 31px;
+  height: 21px;
+  color: var(--complain);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: rotate(180deg); }
+  .slider__btn--prev {
+    color: var(--faint-weak); }
+  .slider__btn--next {
+    transform: rotate(360deg); }
+
+.slider__list-dot {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.slider__dot {
+  width: 15px;
+  height: 15px;
+  margin-right: 15px;
+  background-color: var(--complain);
+  transform: rotate(45deg); }
+  .slider__dot:last-child {
+    margin-right: 0; }
+  .slider__dot--current {
+    background-color: var(--accent); }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,35 @@
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include list-reset;
+}
+
+.nav__item {
+  margin-right: 99px;
+
+  &:nth-child(2) {
+    margin-right: 133px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: var(--basic);
+  text-transform: lowercase;
+
+  &--button {
+    font-size: 22px;
+    line-height: 26px;
+    @include primary-button;
+  }
+}
+

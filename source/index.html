@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазин хищных растений Hunters Plants</title>
+
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
-    <header class="page-header container">
-      <a class="page-header__logo logo" href="#">
-        <img class="logo__img" src="img/logo.svg" width="120" height="49" alt="Логотип магазина Hunters Plants">
+    <header class="header container">
+      <a class="header__logo" href="#">
+        <img class="header__logo-img" src="img/logo.svg" width="120" height="49" alt="Логотип магазина Hunters Plants">
       </a>
-      <nav class="page-header__nav nav">
+      <nav class="header__nav nav">
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">Каталог</a>
@@ -19,16 +21,16 @@
             <a class="nav__link" href="#">Преимущества</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link primary-button" href="#">Заказать</a>
+            <a class="nav__link nav__link--button" href="#">Заказать</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-content">
       <h1 class="visually-hidden">Главная страница магазина Hunter Plants</h1>
-      <section class="page-content__promo promo-slider">
+      <section class="page-content__promo slider">
         <h2 class="visually-hidden">Актуальные предложения</h2>
-        <div class="slider-container">
+        <div class="slider-container slider-container--current">
           <img class="slider__img" src="img/slide-flytrap.jpg" width="1440" height="682" alt="Растения в горшках">
           <p class="slider__desc">
             Только у&nbsp;нас огромный выбор хищных растений
@@ -40,29 +42,37 @@
             Только у&nbsp;нас огромный выбор хищных растений
           </p>
         </div>
-        <div class="slider-container slider-container--current">
+        <div class="slider-container">
           <img class="slider__img" src="img/slide-books.jpg" width="1440" height="682" alt="Растение в интерьере">
           <p class="slider__desc">
             Только у&nbsp;нас огромный выбор хищных растений
           </p>
         </div>
-        <button class="slider__btn slider__btn--prev" type="button" id="btn-prev">
-          <span class="visually-hidden">Предыдущий слайд</span>
-        </button>
-        <button class="slider__btn slider__btn--next" type="button" id="btn-next">
-          <span class="visually-hidden">Следующий слайд</span>
-        </button>
-        <ul class="slider__list-dot">
-          <li class="slider__dot slider__dot--current" tabindex="0">
-            <span class="visually-hidden">Первый слайд</span>
-          </li>
-          <li class="slider__dot" tabindex="0">
-            <span class="visually-hidden">Второй слайд</span>
-          </li>
-          <li class="slider__dot" tabindex="0">
-            <span class="visually-hidden">Третий слайд</span>
-          </li>
-        </ul>
+        <div class="slider__controls">
+          <button class="slider__btn slider__btn--prev" type="button" id="btn-prev">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
+            </svg>
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <ul class="slider__list-dot">
+            <li class="slider__dot slider__dot--current" tabindex="0">
+              <span class="visually-hidden">Первый слайд</span>
+            </li>
+            <li class="slider__dot" tabindex="0">
+              <span class="visually-hidden">Второй слайд</span>
+            </li>
+            <li class="slider__dot" tabindex="0">
+              <span class="visually-hidden">Третий слайд</span>
+            </li>
+          </ul>
+          <button class="slider__btn slider__btn--next" type="button" id="btn-next">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
+            </svg>
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
       </section>
       <section class="page-content__catalog container">
         <h2 class="visually-hidden">Каталог продукции</h2>

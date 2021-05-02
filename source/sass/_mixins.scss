@@ -3,3 +3,14 @@
   margin: 0;
   list-style: none;
 }
+
+@mixin primary-button {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 6px 32px 10px;
+
+
+  color: var(--base-weak);
+  background-color: var(--accent);
+}
