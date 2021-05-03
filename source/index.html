@@ -49,7 +49,7 @@
           </p>
         </div>
         <div class="slider__controls">
-          <button class="slider__btn slider__btn--prev" type="button" id="btn-prev">
+          <button class="slider__btn slider__btn--prev slider__btn--disabled" type="button" id="btn-prev">
             <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
             </svg>
@@ -78,7 +78,7 @@
         <h2 class="visually-hidden">Каталог продукции</h2>
         <form class="page-content__filter filter" action=" " method="get" target="_blank">
           <h3 class="visually-hidden">Фильрт товаров</h3>
-          <fieldset class="filter__range range">
+          <fieldset class="filter__fields range">
             <legend class="range__title">Цена</legend>
               <div class="range__price-controls">
                 <label class="range__price range__price--min">
@@ -107,25 +107,25 @@
               <label class="checkbox__sign" for="hang">Подвесное</label>
             </div>
           </fieldset>
-          <fieldset class="filter__fields filter__fields--watering">
+          <fieldset class="filter__fields filter__fields--water">
             <legend class="filter__subtitle">Полив</legend>
             <div class="filter__item radio-button">
-              <input class="radio-button__input visually-hidden" type="radio" name="more-water" id="more-water" value="more-water" checked>
+              <input class="radio-button__input visually-hidden" type="radio" name="water" id="more-water" value="more-water" checked>
               <label class="radio-button__sign" for="more-water">Влаголюбивые</label>
             </div>
             <div class="filter__item radio-button">
-              <input class="radio-button__input visually-hidden" type="radio" name="less-water" id="less-water" value="less-water">
+              <input class="radio-button__input visually-hidden" type="radio" name="water" id="less-water" value="less-water">
               <label class="radio-button__sign" for="less-water">Умеренный</label>
             </div>
           </fieldset>
-          <fieldset class="filter__fields filter__fields--lighting">
+          <fieldset class="filter__fields filter__fields--light">
             <legend class="filter__subtitle">Освещение</legend>
             <div class="filter__item radio-button">
-              <input class="radio-button__input visually-hidden" type="radio" name="less-light" id="less-light" value="less-light" checked>
+              <input class="radio-button__input visually-hidden" type="radio" name="light" id="less-light" value="less-light" checked>
               <label class="radio-button__sign" for="less-light">Полутень</label>
             </div>
             <div class="filter__item radio-button">
-              <input class="radio-button__input visually-hidden" type="radio" name="more-light" id="more-light" value="more-light">
+              <input class="radio-button__input visually-hidden" type="radio" name="light" id="more-light" value="more-light">
               <label class="radio-button__sign" for="more-light">Яркое</label>
             </div>
           </fieldset>

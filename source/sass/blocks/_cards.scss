@@ -1,0 +1,10 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 75px;
+  row-gap: 35px;
+}
+
+.cards__element {
+  width: 370px; //убрать потом
+}

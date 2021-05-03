@@ -7,10 +7,11 @@
 @mixin primary-button {
   display: flex;
   flex-wrap: wrap;
-
-  padding: 6px 32px 10px;
-
+  justify-content: center;
+  width: 150px;
+  padding: 6px 10px 10px;
 
   color: var(--base-weak);
   background-color: var(--accent);
+  border: none;
 }

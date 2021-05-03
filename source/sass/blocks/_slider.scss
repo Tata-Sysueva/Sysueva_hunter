@@ -1,11 +1,10 @@
-//.slider {
-//
-//}
+.slider {
+  padding-bottom: 80px;
+}
 
 .slider-container {
   display: none;
-
-grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
 
   &--current {
@@ -16,8 +15,9 @@ grid-template-columns: repeat(2, auto);
 .slider__img {
   grid-column: 1/-1;
   grid-row: 1/-1;
+  margin: 0 auto;
+
   object-fit: contain;
-  object-position: center;
   z-index: -1;
 }
 
@@ -60,12 +60,13 @@ grid-template-columns: repeat(2, auto);
   cursor: pointer;
   transform: rotate(180deg);
 
-  &--prev {
-    color: var(--faint-weak);
-  }
-
   &--next {
     transform: rotate(360deg);
+  }
+
+  &--disabled {
+    color: var(--faint-weak);
+    cursor: auto;
   }
 }
 
