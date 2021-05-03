@@ -16,6 +16,14 @@
   &:last-child {
     margin-right: 0;
   }
+
+  &--footer {
+    margin-right: 105px;
+
+    &:nth-child(2) {
+      margin-right: 99px;
+    }
+  }
 }
 
 .nav__link {

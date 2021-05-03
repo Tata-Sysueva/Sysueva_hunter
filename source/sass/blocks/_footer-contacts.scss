@@ -1,0 +1,28 @@
+.footer-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.footer-contacts__copyright {
+  margin: 0 auto 0 0;
+}
+
+.footer-contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include list-reset;
+}
+
+.footer-contacts__item {
+  margin-right: 58px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.footer-contacts__link {
+  color: var(--accent);
+}

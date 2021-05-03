@@ -1,0 +1,40 @@
+.feedback-content {
+  min-height: 720px;
+
+  background-image: url("../../img/feebback-background.jpg"), linear-gradient(90deg, rgb(201, 198, 205) 27%, rgb(225, 228, 235) 63%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feedback-content__wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.feedback-content__box {
+  max-width: 470px;
+  margin: 48px 210px 0 0;
+  padding: 27px 44px;
+
+  background-color: var(--faint-strong);
+}
+
+.feedback-content__title {
+  margin: 0 0 17px 0;
+
+  font-size: 24px;
+  line-height: 33px;
+  font-family: $special-font;
+
+  color: var(--accent);
+}
+
+.feedback-content__text {
+  margin: 0;
+
+  color: var(--base-weak);
+}
+
+.feedback-content__form {
+  margin-top: 92px;
+}

@@ -1,0 +1,24 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  border: 2px solid var(--accent);
+}
+
+.card__title {
+  margin: 0 20px 20px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.card__text {
+  margin: 0 20px 23px;
+}
+
+.card__img {
+  margin-bottom: 25px;
+
+  order: -1;
+}

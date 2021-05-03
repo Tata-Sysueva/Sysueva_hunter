@@ -42,3 +42,8 @@
   background-color: var(--accent);
   transform: rotate(45deg);
 }
+
+.radio-button__input:checked + .radio-button__sign--lees-light::after {
+  top: 8.5px;
+  left: 8.5px;
+}

@@ -122,7 +122,7 @@
             <legend class="filter__subtitle">Освещение</legend>
             <div class="filter__item radio-button">
               <input class="radio-button__input visually-hidden" type="radio" name="light" id="less-light" value="less-light" checked>
-              <label class="radio-button__sign" for="less-light">Полутень</label>
+              <label class="radio-button__sign radio-button__sign--lees-light" for="less-light">Полутень</label>
             </div>
             <div class="filter__item radio-button">
               <input class="radio-button__input visually-hidden" type="radio" name="light" id="more-light" value="more-light">
@@ -164,72 +164,80 @@
           </article>
         </section>
       </section>
-      <section class="page-content__element">
+      <section class="page-content__element container features">
         <h2 class="features__title">Почему мы?</h2>
         <ul class="features__list">
           <li class="features__item features__item--range">
-            <span class="features__item-title">Широкий ассортимент</span>
-            Огромный выбор разнообразных растений на&nbsp;любой вкус.
+            <h3 class="features__item-title">Широкий ассортимент</h3>
+            <p class="features__text">
+              Огромный выбор разнообразных растений на&nbsp;любой вкус.
+            </p>
           </li>
           <li class="features__item features__item--delivery">
-            <span class="features__item-title">Бесплатная Доставка</span>
-            Бесплатная доставка в&nbsp;пределах города в&nbsp;день заказа
+            <h3 class="features__item-title">Бесплатная Доставка</h3>
+            <p class="features__text">
+              Бесплатная доставка в&nbsp;пределах города в&nbsp;день заказа
+            </p>
           </li>
           <li class="features__item features__item--sales">
-            <span class="features__item-title">Программа скидок</span>
-            Вступайте в наш клуб постоянных покупателей и получайте скидки
+            <h3 class="features__item-title">Программа скидок</h3>
+            <p class="features__text">
+              Вступайте в наш клуб постоянных покупателей и получайте скидки
+            </p>
           </li>
         </ul>
       </section>
       <section class="page-content__item feedback-content">
-        <div class="feedback-content__wrapper">
-          <h2 class="feedback-content__title">Оставьте свою заявку</h2>
-          <p class="feedback-content__text">
-            Наши опытные консультанты свяжутся с&nbsp;вами в&nbsp;течение часа и&nbsp;помогут подобрать растения под ваши запросы.
-          </p>
+        <div class="feedback-content__wrapper container">
+          <div class="feedback-content__box">
+            <h2 class="feedback-content__title">Оставьте свою заявку</h2>
+            <p class="feedback-content__text">
+              Наши опытные консультанты свяжутся с&nbsp;вами в&nbsp;течение часа и&nbsp;помогут подобрать растения под ваши запросы.
+            </p>
+          </div>
+          <form class="feedback-content__form feedback" action=" " method="post">
+            <div class="feedback__wrapper feedback__wrapper--plant">
+              <label class="feedback__sign">Выберите растение</label>
+              <select class="feedback__list" name="plants" id="plants">
+                <option class="feedback__item">Выберите растение</option>
+                <option class="feedback__item" value="drosera">Росянка</option>
+                <option class="feedback__item" value="dionaea">Венера Мухоловка</option>
+                <option class="feedback__item" value="nepenthes">Непетес</option>
+                <option class="feedback__item" value="sarracenia">Саррацения</option>
+              </select>
+            </div>
+            <div class="feedback__wrapper feedback__wrapper--user">
+              <label class="feedback__sign" for="user-name">Ваше имя*</label>
+              <input class="feedback__field feedback__item--name" id="user-name" type="text" name="user-name" placeholder="Мирослава" required>
+            </div>
+            <div class="feedback__wrapper feedback__wrapper--tel">
+              <label class="feedback__sign" for="email-user">Телефон*</label>
+              <input class="feedback__field feedback__item--tel" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11" required>
+            </div>
+            <div class="feedback__wrapper feedback__wrapper--email">
+              <label class="feedback__sign" for="email-user">E-mail*</label>
+              <input class="feedback__field feedback__item--email" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com" required>
+            </div>
+            <button class="feedback__btn">Заказать</button>
+          </form>
         </div>
-        <form class="feedback-content__form feedback" action=" " method="post">
-          <div class="feedback__wrapper feedback__wrapper--plant">
-            <label class="feedback__sign">Выберите растение</label>
-            <select class="feedback__list" name="plants" id="plants">
-              <option class="feedback__item">Выберите растение</option>
-              <option class="feedback__item" value="drosera">Росянка</option>
-              <option class="feedback__item" value="dionaea">Венера Мухоловка</option>
-              <option class="feedback__item" value="nepenthes">Непетес</option>
-              <option class="feedback__item" value="sarracenia">Саррацения</option>
-            </select>
-          </div>
-          <div class="feedback__wrapper feedback__wrapper--user">
-            <label for="user-name">Ваше имя:<sub>*</sub></label>
-            <input class="feedback__item feedback__item--name" id="user-name" type="text" name="user-name" placeholder="Мирослава" required>
-          </div>
-          <div class="feedback__wrapper feedback__wrapper--tel">
-            <label for="email-user">Телефон:<sub>*</sub></label>
-            <input class="feedback__item feedback__item--tel" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11" required>
-          </div>
-          <div class="feedback__wrapper feedback__wrapper--email">
-            <label for="email-user">E-mail:<sub>*</sub></label>
-            <input class="feedback__item feedback__item--email" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com" required>
-          </div>
-          <button class="feedback__btn">Заказать</button>
-        </form>
       </section>
     </main>
-    <footer class="page-footer">
-      <div class="footer__wrapper">
-        <a class="page-footer__logo logo" href="#">
-          <img class="logo__img" src="img/logo.svg" width="120" height="49" alt="Логотип магазина Hunter Plants">
+    <footer class="page-footer container">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="#">
+          <img class="page-footer__img" src="img/logo.svg" width="120" height="49" alt="Логотип магазина Hunter Plants">
         </a>
         <nav class="page-footer__nav nav">
           <ul class="nav__list">
-            <li class="nav__item">
+            <li class="nav__item nav__item--footer">
               <a class="nav__link" href="#">Каталог</a>
             </li>
-            <li class="nav__item">
+            <li class="nav__item nav__item--footer">
               <a class="nav__link" href="#">Преимущества</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link primary-button" href="#">Заказать</a>
+            <li class="nav__item nav__item--footer">
+              <a class="nav__link" href="#">Заказать</a>
             </li>
           </ul>
         </nav>

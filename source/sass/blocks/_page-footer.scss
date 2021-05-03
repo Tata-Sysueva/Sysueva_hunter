@@ -1,0 +1,22 @@
+.page-footer {
+  margin-top: 45px;
+  padding-bottom: 75px;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 55px;
+  padding-bottom: 43px;
+
+  border-top: 3px solid var(--accent);
+}
+
+.page-footer__logo {
+  margin-right:auto;
+}
+
+.page-footer__logo-img {
+  width: 120px;
+  height: 49px;
+}
