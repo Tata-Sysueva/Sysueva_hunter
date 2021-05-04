@@ -7,6 +7,8 @@
 }
 
 .feedback__wrapper {
+  position: relative;
+
   margin-bottom: 20px;
 
   &--plant {
@@ -42,13 +44,26 @@
   margin-top: 12px;
   padding: 8px 15px 4px;
 
+  color: var(--basic);
   border: 1px solid var(--accent);
+  background-color: var(--faint-weak-back);
 
   &::placeholder {
     font-size: 14px;
     line-height: 25px;
 
     color: var(--faint-strong-range);
+    background-color: var(--faint-weak-back);
+  }
+
+  &:hover,
+  &:active {
+    border-color: var(--accent-strong);
+    outline: none;
+  }
+
+  &:focus {
+    outline: 2px solid var(--accent-strong);
   }
 }
 
@@ -61,6 +76,22 @@
 
   color: var(--faint-strong-range);
   appearance: none;
+}
+
+.feedback__note {
+  display: none;
+}
+
+.feedback__error-js {
+  position: absolute;
+  top: 70px;
+
+  display: block;
+
+  font-size: 12px;
+  line-height: 14px;
+
+  color: #c73304;
 }
 
 .feedback__btn {

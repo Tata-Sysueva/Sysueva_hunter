@@ -53,7 +53,7 @@
 }
 
 .slider__btn {
-  width: 31px;
+  width: 35px;
   height: 21px;
 
   color: var(--complain);
@@ -62,6 +62,8 @@
   cursor: pointer;
   transform: rotate(180deg);
 
+  @include state(var(--basic-strong));
+
   &--next {
     transform: rotate(360deg);
   }
@@ -69,6 +71,11 @@
   &--disabled {
     color: var(--faint-weak);
     cursor: auto;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
@@ -86,12 +93,25 @@
   background-color: var(--complain);
 
   transform: rotate(45deg);
+  cursor: pointer;
 
   &:last-child {
     margin-right: 0;
   }
 
+  &:hover {
+    background-color: var(--complain-strong);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
   &--current {
     background-color: var(--accent);
+
+    &:hover {
+      background-color: var(--accent-strong);
+    }
   }
 }

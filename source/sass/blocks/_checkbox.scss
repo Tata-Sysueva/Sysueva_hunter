@@ -34,7 +34,31 @@
   width: 14px;
   height: 11px;
 
-  background-image: url("../../img/tick.svg");
+  background-image: url("../img/tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.checkbox__input:hover + .checkbox__sign::before {
+  border-color: var(--accent-strong);
+}
+
+.checkbox__input:focus + .checkbox__sign::before {
+  box-shadow: 0 0 5px 0 var(--accent-strong06);
+}
+
+.checkbox__input:active + .checkbox__sign::before,
+.checkbox__input:checked:active + .checkbox__sign::after {
+  opacity: 0.7;
+}
+
+.checkbox__input:disabled + .checkbox__sign::before,
+.checkbox__input:disabled + .checkbox__sign {
+  color: var(--faint-weak);
+  border-color: var(--faint-weak);
+  cursor: auto;
+}
+
+.checkbox__input:checked:hover + .checkbox__sign::after {
+  background-image: url("../img/tick-hover.svg");
 }

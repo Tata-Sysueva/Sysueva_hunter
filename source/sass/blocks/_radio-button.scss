@@ -43,7 +43,31 @@
   transform: rotate(45deg);
 }
 
-.radio-button__input:checked + .radio-button__sign--lees-light::after {
+.radio-button__input:checked + .radio-button__sign--less-light::after {
   top: 8.5px;
   left: 8.5px;
+}
+
+.radio-button__input:hover + .radio-button__sign::before {
+  border-color: var(--accent-strong);
+}
+
+.radio-button__input:focus + .radio-button__sign::before {
+  box-shadow: 0 0 5px 0 var(--accent-strong06);
+}
+
+.radio-button__input:active + .radio-button__sign::before,
+.radio-button__input:checked:active + .radio-button__sign::after {
+  opacity: 0.7;
+}
+
+.radio-button__input:disabled + .radio-button__sign::before,
+.radio-button__input:disabled + .radio-button__sign {
+  color: var(--faint-weak);
+  border-color: var(--faint-weak);
+  cursor: auto;
+}
+
+.radio-button__input:checked:hover + .radio-button__sign::after {
+  background-color: var(--accent-strong);
 }

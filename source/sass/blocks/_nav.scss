@@ -34,10 +34,26 @@
   color: var(--basic);
   text-transform: lowercase;
 
+  &:hover {
+    color: var(--accent);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px dotted var(--basic-strong);
+  }
+
   &--button {
     font-size: 22px;
     line-height: 26px;
     @include primary-button;
+
+    &:hover {
+      color: var(--base-weak);
+    }
   }
 }
 

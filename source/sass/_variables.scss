@@ -1,13 +1,17 @@
 :root {
   --base-weak: #ffffff;
   --faint: rgba(20, 20, 20, 0.5);
+  --faint-weak-back: #f9fbfd;
   --faint-weak: #e5e5e5;
   --faint-strong-range: rgba(20, 20, 20, 0.5);
   --faint-strong: rgba(0, 0, 0, 0.8);
   --basic: #595755;
   --basic-strong: #27221c;
   --accent: #a4341c;
+  --accent-strong: #792c1c;
+  --accent-strong06: rgba(121,44,28,0.6);
   --complain: #32521e;
+  --complain-strong: #233915;
 }
 
 //text

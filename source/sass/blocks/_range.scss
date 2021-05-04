@@ -26,6 +26,12 @@
 
   -moz-appearance: textfield;
 
+  &:focus {
+    box-shadow: 0 0 5px 0 var(--accent-strong06);
+    border-color: var(--accent-strong);
+    outline: none;
+  }
+
   &--min {
     margin-left: 9px;
     margin-right: 22px;

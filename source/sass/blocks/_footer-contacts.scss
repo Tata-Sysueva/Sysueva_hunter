@@ -25,4 +25,16 @@
 
 .footer-contacts__link {
   color: var(--accent);
+
+  &:hover {
+    color: var(--accent-strong);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px dotted var(--basic-strong);
+  }
 }

@@ -50,7 +50,7 @@
         </div>
         <div class="slider__controls">
           <button class="slider__btn slider__btn--prev slider__btn--disabled" type="button" id="btn-prev">
-            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
             </svg>
             <span class="visually-hidden">Предыдущий слайд</span>
@@ -67,7 +67,7 @@
             </li>
           </ul>
           <button class="slider__btn slider__btn--next" type="button" id="btn-next">
-            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
             </svg>
             <span class="visually-hidden">Следующий слайд</span>
@@ -122,7 +122,7 @@
             <legend class="filter__subtitle">Освещение</legend>
             <div class="filter__item radio-button">
               <input class="radio-button__input visually-hidden" type="radio" name="light" id="less-light" value="less-light" checked>
-              <label class="radio-button__sign radio-button__sign--lees-light" for="less-light">Полутень</label>
+              <label class="radio-button__sign radio-button__sign--less-light" for="less-light">Полутень</label>
             </div>
             <div class="filter__item radio-button">
               <input class="radio-button__input visually-hidden" type="radio" name="light" id="more-light" value="more-light">
@@ -133,33 +133,37 @@
           <button class="filter__btn filter__btn--reset" type="submit">Сбросить</button>
         </form>
         <section class="page-content__catalog-cards cards">
-          <article class="cards__element card">
+          <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Росянка</h3>
             <p class="card__text">
               Бесстебельное насекомоядное растение. Встречается на&nbsp;всех континентах кроме Антарктиды.
             </p>
+            <a class="card__link" href="#">Заказать</a>
             <img class="card__img" src="img/drosera.jpg" width="370"
                  height="225" alt="Росянка" >
           </article>
-          <article class="cards__element card">
+          <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Венера Мухоловка</h3>
             <p class="card__text">
               Одним из&nbsp;самых популярных цветов-хищников, произрастающее в&nbsp;Северной Америке.
             </p>
+            <a class="card__link" href="#">Заказать</a>
             <img class="card__img" src="img/dionaea.jpg" width="370" height="225" alt="Венера Мухоловка">
           </article>
-          <article class="cards__element card">
+          <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Непеитес</h3>
             <p class="card__text">
               Самое экзотическое и&nbsp;оригинальное комнатное насекомоядное растение, которое вы&nbsp;найдете.
             </p>
+            <a class="card__link" href="#">Заказать</a>
             <img class="card__img" src="img/nepenthes.jpg" width="370" height="225" alt="Непетес">
           </article>
-          <article class="cards__element card">
+          <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Саррацения</h3>
             <p class="card__text">
               Необычное растение произошедшие из&nbsp;влажных торфяных мест Северной и&nbsp;Южной Америке.
             </p>
+            <a class="card__link" href="#">Заказать</a>
             <img class="card__img" src="img/sarracenia.jpg" width="370" height="225" alt="Саррацения">
           </article>
         </section>
@@ -208,15 +212,18 @@
             </div>
             <div class="feedback__wrapper feedback__wrapper--user">
               <label class="feedback__sign" for="user-name">Ваше имя*</label>
-              <input class="feedback__field feedback__item--name" id="user-name" type="text" name="user-name" placeholder="Мирослава" required>
+              <input class="feedback__field feedback__item--name" id="user-name" type="text" name="user-name" placeholder="Мирослава">
+              <span class="feedback__note">введите имя</span>
             </div>
             <div class="feedback__wrapper feedback__wrapper--tel">
               <label class="feedback__sign" for="email-user">Телефон*</label>
-              <input class="feedback__field feedback__item--tel" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11" required>
+              <input class="feedback__field feedback__item--tel" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11">
+              <span class="feedback__note">введите номер телефона</span>
             </div>
             <div class="feedback__wrapper feedback__wrapper--email">
               <label class="feedback__sign" for="email-user">E-mail*</label>
-              <input class="feedback__field feedback__item--email" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com" required>
+              <input class="feedback__field feedback__item--email" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com">
+              <span class="feedback__note">введите адрес электронной почты</span>
             </div>
             <button class="feedback__btn">Заказать</button>
           </form>
@@ -249,19 +256,33 @@
         <ul class="footer-contacts__list">
           <li class="footer-contacts__item">
             <a class="footer-contacts__link footer-contacts__link--socials footer-contacts__link--insta" href="#" title="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)" fill="currentColor"><path d="M33.967 10.202c-.08-1.753-.372-2.959-.79-4.003a8.035 8.035 0 00-1.967-2.927 8.398 8.398 0 00-3.009-1.902C27.12.964 25.884.68 24.078.603 22.257.52 21.679.5 17.063.5s-5.194.02-7.007.097c-1.807.077-3.049.36-4.125.767a8.324 8.324 0 00-3.015 1.908 8.106 8.106 0 00-1.96 2.92c-.418 1.051-.71 2.25-.79 4.003C.08 11.962.06 12.523.06 17.003s.02 5.041.1 6.801c.079 1.754.371 2.96.79 4.004a8.12 8.12 0 001.966 2.926c.85.838 1.88 1.49 3.009 1.902 1.082.406 2.318.69 4.124.767 1.813.078 2.391.097 7.008.097 4.616 0 5.194-.02 7.007-.097 1.806-.077 3.048-.36 4.124-.767 2.285-.857 4.092-2.61 4.975-4.828.419-1.051.71-2.25.79-4.004.08-1.76.1-2.32.1-6.8 0-4.481-.007-5.042-.086-6.802zm-3.062 13.473c-.073 1.612-.352 2.482-.585 3.063a5.56 5.56 0 01-3.228 3.133c-.597.225-1.5.496-3.154.567-1.794.077-2.332.097-6.868.097-4.537 0-5.081-.02-6.868-.097-1.66-.071-2.557-.342-3.155-.567a5.25 5.25 0 01-1.953-1.232 5.118 5.118 0 01-1.268-1.895c-.233-.58-.512-1.457-.585-3.062-.08-1.74-.1-2.263-.1-6.666 0-4.403.02-4.932.1-6.666.073-1.611.352-2.482.585-3.062A5.005 5.005 0 015.1 5.393a5.296 5.296 0 011.953-1.231c.598-.226 1.5-.497 3.155-.568 1.793-.077 2.331-.096 6.867-.096 4.543 0 5.081.019 6.868.096 1.66.071 2.557.342 3.155.568a5.246 5.246 0 011.953 1.23c.564.536.996 1.18 1.268 1.896.233.58.512 1.457.585 3.062.08 1.741.1 2.263.1 6.666 0 4.403-.02 4.919-.1 6.66z"/><path d="M17.063 8.526c-4.822 0-8.734 3.797-8.734 8.477s3.912 8.477 8.734 8.477 8.734-3.796 8.734-8.477c0-4.68-3.912-8.477-8.734-8.477zm0 13.976c-3.128 0-5.666-2.462-5.666-5.499 0-3.036 2.538-5.499 5.666-5.499 3.129 0 5.666 2.463 5.666 5.5 0 3.036-2.537 5.498-5.666 5.498zM28.182 8.19c0 1.094-.913 1.98-2.04 1.98-1.125 0-2.038-.886-2.038-1.98 0-1.092.913-1.978 2.038-1.978 1.127 0 2.04.886 2.04 1.979z"/></g><defs><clipPath id="clip0"><path fill="currentColor" transform="translate(0 .5)" d="M0 0h34v33H0z"/></clipPath></defs></svg>
+              <svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g clip-path="url(#clip0)" fill="currentColor">
+                  <path d="M33.967 10.202c-.08-1.753-.372-2.959-.79-4.003a8.035 8.035 0 00-1.967-2.927 8.398 8.398 0 00-3.009-1.902C27.12.964 25.884.68 24.078.603 22.257.52 21.679.5 17.063.5s-5.194.02-7.007.097c-1.807.077-3.049.36-4.125.767a8.324 8.324 0 00-3.015 1.908 8.106 8.106 0 00-1.96 2.92c-.418 1.051-.71 2.25-.79 4.003C.08 11.962.06 12.523.06 17.003s.02 5.041.1 6.801c.079 1.754.371 2.96.79 4.004a8.12 8.12 0 001.966 2.926c.85.838 1.88 1.49 3.009 1.902 1.082.406 2.318.69 4.124.767 1.813.078 2.391.097 7.008.097 4.616 0 5.194-.02 7.007-.097 1.806-.077 3.048-.36 4.124-.767 2.285-.857 4.092-2.61 4.975-4.828.419-1.051.71-2.25.79-4.004.08-1.76.1-2.32.1-6.8 0-4.481-.007-5.042-.086-6.802zm-3.062 13.473c-.073 1.612-.352 2.482-.585 3.063a5.56 5.56 0 01-3.228 3.133c-.597.225-1.5.496-3.154.567-1.794.077-2.332.097-6.868.097-4.537 0-5.081-.02-6.868-.097-1.66-.071-2.557-.342-3.155-.567a5.25 5.25 0 01-1.953-1.232 5.118 5.118 0 01-1.268-1.895c-.233-.58-.512-1.457-.585-3.062-.08-1.74-.1-2.263-.1-6.666 0-4.403.02-4.932.1-6.666.073-1.611.352-2.482.585-3.062A5.005 5.005 0 015.1 5.393a5.296 5.296 0 011.953-1.231c.598-.226 1.5-.497 3.155-.568 1.793-.077 2.331-.096 6.867-.096 4.543 0 5.081.019 6.868.096 1.66.071 2.557.342 3.155.568a5.246 5.246 0 011.953 1.23c.564.536.996 1.18 1.268 1.896.233.58.512 1.457.585 3.062.08 1.741.1 2.263.1 6.666 0 4.403-.02 4.919-.1 6.66z"/>
+                  <path d="M17.063 8.526c-4.822 0-8.734 3.797-8.734 8.477s3.912 8.477 8.734 8.477 8.734-3.796 8.734-8.477c0-4.68-3.912-8.477-8.734-8.477zm0 13.976c-3.128 0-5.666-2.462-5.666-5.499 0-3.036 2.538-5.499 5.666-5.499 3.129 0 5.666 2.463 5.666 5.5 0 3.036-2.537 5.498-5.666 5.498zM28.182 8.19c0 1.094-.913 1.98-2.04 1.98-1.125 0-2.038-.886-2.038-1.98 0-1.092.913-1.978 2.038-1.978 1.127 0 2.04.886 2.04 1.979z"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0">
+                    <path fill="currentColor" transform="translate(0 .5)" d="M0 0h34v33H0z"/>
+                  </clipPath>
+                </defs>
+              </svg>
               <span class="visually-hidden">Ссылка на страницу магазина в социальной сети "Instagram"</span>
             </a>
           </li>
           <li class="footer-contacts__item">
             <a class="footer-contacts__link footer-contacts__link--socials footer-contacts__link--facebook" href="#" title="Facebook" target="_blank" rel="noopener noreferrer">
-              <svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M31.161 1.515H2.804c-.971 0-1.758.765-1.758 1.708v27.523c0 .943.788 1.707 1.76 1.707h15.267V20.488h-4.14v-4.682h4.14v-3.447c0-3.996 2.514-6.172 6.187-6.172 1.76 0 3.27.128 3.712.185v4.177h-2.533c-1.999 0-2.386.921-2.386 2.274v2.983h4.778l-.622 4.682h-4.156v11.965h8.108c.972 0 1.76-.764 1.76-1.707V3.22c0-.942-.788-1.706-1.76-1.706z" fill="currentColor"/></svg>
+              <svg width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M31.161 1.515H2.804c-.971 0-1.758.765-1.758 1.708v27.523c0 .943.788 1.707 1.76 1.707h15.267V20.488h-4.14v-4.682h4.14v-3.447c0-3.996 2.514-6.172 6.187-6.172 1.76 0 3.27.128 3.712.185v4.177h-2.533c-1.999 0-2.386.921-2.386 2.274v2.983h4.778l-.622 4.682h-4.156v11.965h8.108c.972 0 1.76-.764 1.76-1.707V3.22c0-.942-.788-1.706-1.76-1.706z" fill="currentColor"/>
+              </svg>
               <span class="visually-hidden">Ссылка на страницу магазина в социальной сети "Facebook"</span>
             </a>
           </li>
           <li class="footer-contacts__item">
             <a class="footer-contacts__link footer-contacts__link--socials footer-contacts__link--youtube" href="#" title="YouTube" target="_blank" rel="noopener noreferrer">
-              <svg width="40" height="41" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M37.958 11.127a4.698 4.698 0 00-3.305-3.305c-2.935-.803-14.673-.803-14.673-.803s-11.738 0-14.672.772c-1.576.432-2.873 1.73-3.305 3.336-.773 2.934-.773 9.02-.773 9.02s0 6.116.773 9.02a4.699 4.699 0 003.305 3.304c2.965.804 14.672.804 14.672.804s11.738 0 14.673-.773a4.698 4.698 0 003.305-3.305c.772-2.934.772-9.02.772-9.02s.031-6.116-.772-9.05zM16.243 25.768V14.525l9.76 5.622-9.76 5.621z" fill="currentColor"/></svg>
+              <svg width="40" height="41" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <path d="M37.958 11.127a4.698 4.698 0 00-3.305-3.305c-2.935-.803-14.673-.803-14.673-.803s-11.738 0-14.672.772c-1.576.432-2.873 1.73-3.305 3.336-.773 2.934-.773 9.02-.773 9.02s0 6.116.773 9.02a4.699 4.699 0 003.305 3.304c2.965.804 14.672.804 14.672.804s11.738 0 14.673-.773a4.698 4.698 0 003.305-3.305c.772-2.934.772-9.02.772-9.02s.031-6.116-.772-9.05zM16.243 25.768V14.525l9.76 5.622-9.76 5.621z" fill="currentColor"/>
+              </svg>
               <span class="visually-hidden">Ссылка на страницу магазина в социальной сети "YouTube"</span>
             </a>
           </li>

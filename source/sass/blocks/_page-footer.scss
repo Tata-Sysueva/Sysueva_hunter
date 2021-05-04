@@ -13,7 +13,8 @@
 }
 
 .page-footer__logo {
-  margin-right:auto;
+  margin-right: auto;
+  @include state (var(--accent));
 }
 
 .page-footer__logo-img {
