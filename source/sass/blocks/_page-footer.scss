@@ -6,8 +6,9 @@
 .page-footer__wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   padding-top: 55px;
-  padding-bottom: 43px;
+  padding-bottom: 25px;
 
   border-top: 3px solid var(--accent);
 }

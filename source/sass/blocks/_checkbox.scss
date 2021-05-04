@@ -5,15 +5,15 @@
 .checkbox__sign {
   position: relative;
   display: block;
-  padding-left: 40px;
+  padding-left: 34px;
   cursor: pointer;
   user-select: none;
 }
 
 .checkbox__input + .checkbox__sign::before {
   position: absolute;
-  top: 5px;
-  left: 5px;
+  top: 6px;
+  left: 3px;
 
   display: block;
   width: 16px;
@@ -28,7 +28,7 @@
   content: "";
   position: absolute;
   top: 8px;
-  left: 6.5px;
+  left: 4px;
 
   display: block;
   width: 14px;
