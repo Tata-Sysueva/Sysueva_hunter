@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазин хищных растений Hunters Plants</title>
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/min-style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="header container">
@@ -21,7 +21,7 @@
             <a class="nav__link" href="#">Преимущества</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link nav__link--button" href="#">Заказать</a>
+            <a class="nav__link nav__link--button" href="#form">Заказать</a>
           </li>
         </ul>
       </nav>
@@ -30,26 +30,26 @@
       <h1 class="visually-hidden">Главная страница магазина Hunter Plants</h1>
       <section class="page-content__promo slider">
         <h2 class="visually-hidden">Актуальные предложения</h2>
-        <div class="slider-container slider-container--current">
+        <div class="slider__container slider__container--current">
           <img class="slider__img" src="img/slide-flytrap.jpg" width="1440" height="682" alt="Растения в горшках">
           <p class="slider__desc">
             Только у&nbsp;нас огромный выбор хищных растений
           </p>
         </div>
-        <div class="slider-container">
+        <div class="slider__container">
           <img class="slider__img" src="img/slide-people.jpg" width="1440" height="682" alt="Люди ухаживают за растениями">
           <p class="slider__desc">
             Только у&nbsp;нас огромный выбор хищных растений
           </p>
         </div>
-        <div class="slider-container">
+        <div class="slider__container">
           <img class="slider__img" src="img/slide-books.jpg" width="1440" height="682" alt="Растение в интерьере">
           <p class="slider__desc">
             Только у&nbsp;нас огромный выбор хищных растений
           </p>
         </div>
         <div class="slider__controls">
-          <button class="slider__btn slider__btn--prev slider__btn--disabled" type="button" id="btn-prev">
+          <button class="slider__btn slider__btn--prev" type="button" id="btn-prev" disabled="disabled">
             <svg width="31" height="16" viewBox="0 0 31 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
               <path d="M30.7071 8.94978C31.0976 8.55926 31.0976 7.92609 30.7071 7.53557L24.3431 1.17161C23.9526 0.781084 23.3195 0.781084 22.9289 1.17161C22.5384 1.56213 22.5384 2.1953 22.9289 2.58582L28.5858 8.24268L22.9289 13.8995C22.5384 14.2901 22.5384 14.9232 22.9289 15.3137C23.3195 15.7043 23.9526 15.7043 24.3431 15.3137L30.7071 8.94978ZM0 9.24268H30V7.24268H0V9.24268Z" fill="currentColor"/>
             </svg>
@@ -76,21 +76,20 @@
       </section>
       <section class="page-content__catalog container">
         <h2 class="visually-hidden">Каталог продукции</h2>
-        <form class="page-content__filter filter" action=" " method="get" target="_blank">
+        <form class="page-content__filter filter" action="https://echo.htmlacademy.ru" method="get" target="_blank">
           <h3 class="visually-hidden">Фильрт товаров</h3>
           <fieldset class="filter__fields range">
             <legend class="range__title">Цена</legend>
               <div class="range__price-controls">
                 <label class="range__price range__price--min">
                   от
-                  <input  class="range__item range__item--min" type="number" name="min-price" value="500" aria-label="Поле ввода минимального значения цены">
+                  <input  class="range__item range__item--min" type="number" min="0" name="min-price" aria-label="Поле ввода минимального значения цены" placeholder="500">
                 </label>
                 <label class="range__price range__price--max">
                   до
-                  <input class="range__item range__item--max" type="number" name="max-price" value="3500" aria-label="Поле ввода максимального значения цены">
+                  <input class="range__item range__item--max" type="number" name="max-price" aria-label="Поле ввода максимального значения цены" placeholder="3500">
                 </label>
               </div>
-            </div>
           </fieldset>
           <fieldset class="filter__fields filter__fields--place">
             <legend class="filter__subtitle">Расположение</legend>
@@ -130,17 +129,17 @@
             </div>
           </fieldset>
           <button class="filter__btn" type="submit">Показать</button>
-          <button class="filter__btn filter__btn--reset" type="submit">Сбросить</button>
+          <button class="filter__btn filter__btn--reset" type="reset">Сбросить</button>
         </form>
         <section class="page-content__catalog-cards cards">
+          <h2 class="visually-hidden">Карточки товара</h2>
           <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Росянка</h3>
             <p class="card__text">
               Бесстебельное насекомоядное растение. Встречается на&nbsp;всех континентах кроме Антарктиды.
             </p>
             <a class="card__link" href="#">Заказать</a>
-            <img class="card__img" src="img/drosera.jpg" width="370"
-                 height="225" alt="Росянка" >
+            <img class="card__img" src="img/drosera.jpg" width="370" height="225" alt="Росянка">
           </article>
           <article class="cards__element card" tabindex="0">
             <h3 class="card__title">Венера Мухоловка</h3>
@@ -199,7 +198,7 @@
               Наши опытные консультанты свяжутся с вами в&nbsp;течение часа и&nbsp;помогут подобрать растения под ваши запросы.
             </p>
           </div>
-          <form class="feedback-content__form feedback" action=" " method="post">
+          <form class="feedback-content__form feedback" action="https://echo.htmlacademy.ru" method="post" id="form">
             <div class="feedback__wrapper feedback__wrapper--plant">
               <label class="feedback__sign">Выберите растение</label>
               <select class="feedback__list" name="plants" id="plants">
@@ -212,17 +211,17 @@
             </div>
             <div class="feedback__wrapper feedback__wrapper--user">
               <label class="feedback__sign" for="user-name">Ваше имя*</label>
-              <input class="feedback__field feedback__item--name" id="user-name" type="text" name="user-name" placeholder="Мирослава">
+              <input class="feedback__field" id="user-name" type="text" name="user-name" placeholder="Мирослава">
               <span class="feedback__note">введите имя</span>
             </div>
             <div class="feedback__wrapper feedback__wrapper--tel">
               <label class="feedback__sign" for="email-user">Телефон*</label>
-              <input class="feedback__field feedback__item--tel" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11">
+              <input class="feedback__field" id="tel-user" type="tel" name="tel-user" placeholder="+7(999) 111 11 11">
               <span class="feedback__note">введите номер телефона</span>
             </div>
             <div class="feedback__wrapper feedback__wrapper--email">
               <label class="feedback__sign" for="email-user">E-mail*</label>
-              <input class="feedback__field feedback__item--email" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com">
+              <input class="feedback__field" id="email-user" type="email" name="email-user" placeholder="miroslava@gmail.com">
               <span class="feedback__note">введите адрес электронной почты</span>
             </div>
             <button class="feedback__btn">Заказать</button>
@@ -244,7 +243,7 @@
               <a class="nav__link" href="#">Преимущества</a>
             </li>
             <li class="nav__item nav__item--footer">
-              <a class="nav__link" href="#">Заказать</a>
+              <a class="nav__link" href="#form">Заказать</a>
             </li>
           </ul>
         </nav>
@@ -289,5 +288,8 @@
         </ul>
       </div>
     </footer>
+
+    <script src="js/main.js"></script>
+
   </body>
 </html>

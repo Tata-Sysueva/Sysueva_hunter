@@ -4,7 +4,7 @@
   padding-bottom: 80px;
 }
 
-.slider-container {
+.slider__container {
   display: none;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
@@ -72,14 +72,9 @@
     transform: rotate(360deg);
   }
 
-  &--disabled {
+  &:disabled {
     color: var(--faint-weak);
     cursor: auto;
-
-    &:hover,
-    &:active {
-      opacity: 1;
-    }
   }
 }
 

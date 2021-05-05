@@ -60,10 +60,19 @@ img {
   --basic: #595755;
   --basic-strong: #27221c;
   --accent: #a4341c;
+  --accent-weak: #c73304;
   --accent-strong: #792c1c;
   --accent-strong06: rgba(121,44,28,0.6);
   --complain: #32521e;
-  --complain-strong: #233915; }
+  --complain-strong: #233915;
+  --special: #c9c6cd;
+  --special-weak: #e1e4eb; }
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  padding-left: 170px;
+  padding-right: 170px; }
 
 .page {
   height: 100%; }
@@ -81,12 +90,6 @@ img {
   line-height: 25px;
   font-family: "Lato", "Helvetica", sans-serif;
   color: var(--basic); }
-
-.container {
-  width: 1440px;
-  margin: 0 auto;
-  padding-left: 170px;
-  padding-right: 170px; }
 
 .header {
   display: flex;
@@ -170,11 +173,11 @@ img {
   margin: 0 auto;
   padding-bottom: 80px; }
 
-.slider-container {
+.slider__container {
   display: none;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto); }
-  .slider-container--current {
+  .slider__container--current {
     display: grid; }
 
 .slider__img {
@@ -227,11 +230,9 @@ img {
   .slider__btn--next {
     margin-left: 98px;
     transform: rotate(360deg); }
-  .slider__btn--disabled {
+  .slider__btn:disabled {
     color: var(--faint-weak);
     cursor: auto; }
-    .slider__btn--disabled:hover, .slider__btn--disabled:active {
-      opacity: 1; }
 
 .slider__list-dot {
   display: flex;
@@ -428,17 +429,13 @@ img {
 .radio-button__input:checked + .radio-button__sign::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 8.5px;
+  top: 33%;
+  left: 3.5%;
   display: block;
   width: 10px;
   height: 10px;
   background-color: var(--accent);
   transform: rotate(45deg); }
-
-.radio-button__input:checked + .radio-button__sign--less-light::after {
-  top: 8.5px;
-  left: 8.5px; }
 
 .radio-button__input:hover + .radio-button__sign::before {
   border-color: var(--accent-strong); }
@@ -604,7 +601,7 @@ img {
 
 .feedback-content {
   min-height: 720px;
-  background-image: url("../../img/feebback-background.jpg"), linear-gradient(90deg, #c9c6cd 27%, #e1e4eb 63%);
+  background-image: url("../img/feebback-background.jpg"), linear-gradient(90deg, var(--special) 27%, var(--special-weak) 63%);
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -634,7 +631,7 @@ img {
   margin-top: 92px; }
 
 .feedback {
-  max-width: 400px;
+  width: 400px;
   padding: 40px 50px;
   color: var(--base-weak);
   background-color: var(--complain); }
@@ -661,19 +658,24 @@ img {
 
 .feedback__field,
 .feedback__list {
+  display: flex;
+  align-items: center;
   width: 100%;
+  height: 30px;
   margin-top: 12px;
-  padding: 8px 15px 4px;
+  padding: 0 15px 0;
   color: var(--basic);
   border: 1px solid var(--accent);
   background-color: var(--faint-weak-back); }
   .feedback__field::-moz-placeholder, .feedback__list::-moz-placeholder {
+    padding-top: 8px;
     font-size: 14px;
     line-height: 25px;
     color: var(--faint-strong-range);
     background-color: var(--faint-weak-back); }
   .feedback__field::placeholder,
   .feedback__list::placeholder {
+    padding-top: 8px;
     font-size: 14px;
     line-height: 25px;
     color: var(--faint-strong-range);
@@ -706,7 +708,7 @@ img {
   display: block;
   font-size: 12px;
   line-height: 14px;
-  color: #c73304; }
+  color: var(--accent-weak); }
 
 .feedback__btn {
   margin: 0 auto;

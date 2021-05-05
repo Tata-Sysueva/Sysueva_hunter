@@ -1,7 +1,7 @@
 .feedback-content {
   min-height: 720px;
 
-  background-image: url("../../img/feebback-background.jpg"), linear-gradient(90deg, rgb(201, 198, 205) 27%, rgb(225, 228, 235) 63%);
+  background-image: url("../img/feebback-background.jpg"), linear-gradient(90deg, var(--special) 27%, var(--special-weak) 63%);
   background-repeat: no-repeat;
   background-position: center;
 }

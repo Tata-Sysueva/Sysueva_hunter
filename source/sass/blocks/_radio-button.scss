@@ -32,8 +32,8 @@
 .radio-button__input:checked + .radio-button__sign::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 8.5px;
+  top: 33%;
+  left: 3.5%;
 
   display: block;
   width: 10px;
@@ -41,11 +41,6 @@
 
   background-color: var(--accent);
   transform: rotate(45deg);
-}
-
-.radio-button__input:checked + .radio-button__sign--less-light::after {
-  top: 8.5px;
-  left: 8.5px;
 }
 
 .radio-button__input:hover + .radio-button__sign::before {
